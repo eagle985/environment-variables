@@ -1,0 +1,12 @@
+require('dotenv').config()
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) =>[
+    res.send('Hello world!')
+])
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000?')
+    console.log(`The secret is ${process.env.SECRET_PASSWORD}`)
+})
